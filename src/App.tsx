@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet, Navigate } from 'react-router-dom'
+import { Routes, Route, Outlet, Navigate, HashRouter } from 'react-router-dom'
 import { createContext, useState, useEffect } from "react";
 import Layout from './pages/Layout'
 import Register from './pages/Register'
@@ -62,7 +62,7 @@ function App() {
     // Make the AuthContext available to whole application
     <AuthContext.Provider value={[user, setUser]}>
       {/* Using React-Router-Dom routing*/}
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
             <Route path="/" element={<Layout />}>
               <Route path='register' element={<Register />} />
@@ -73,7 +73,7 @@ function App() {
               </Route>
             </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AuthContext.Provider>
   )
 }
