@@ -1,0 +1,16 @@
+/* Very Basic Styling */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Added Custom font */
+
+@font-face {
+    font-family: 'Lobster';
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
